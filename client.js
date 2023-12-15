@@ -34,14 +34,14 @@ console.log(HOST)
 const socket = io(HOST)
 
 socket.on('connect', () => {
-  console.log('Connected to the server')
+  console.log('ok')
 })
 
 socket.on('take-screenshot', () => {
   const fileName = `screenshot-${new Date().getTime()}.png`
-  console.log(`taking screenshot... ${fileName}`)
+  console.log(`... ${fileName}`)
   shell.exec(`screencapture -x ~/Desktop/${fileName}`, { silent: false }, async () => {
-    console.log(`taking screenshot...done`)
+    console.log(`...done`)
     const screenshot = fs.readFileSync(`${process.env.HOME}/Desktop/${fileName}`, 'base64')
     console.log(`length=${screenshot.length} data=${screenshot.substring(0, 50)}`)
     await uploadBase64Screenshot(screenshot, 'polaris-adventures-development-share', 'screenshot.png')
