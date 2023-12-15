@@ -18,7 +18,9 @@ io.on('connection', (socket) => {
     console.log('Screenshot taken')
   })
 })
-
+app.get('/health', (req, res) => {
+  res.status(200).send('OK')
+})
 app.get('/take-screenshot', (req, res) => {
   if (clientSocket) {
     new Promise((resolve, reject) => {
