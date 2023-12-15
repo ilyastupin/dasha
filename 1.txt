@@ -1,0 +1,17 @@
+brew –version
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+
+brew install node
+node -v
+npm -v
+
+which git
+
+export AWS_ACCESS_KEY_ID=AKIAUFNRJ2SI4GE4ETB4
+export AWS_SECRET_ACCESS_KEY=v8BP4/hSe93qc4lDQo8soQ4XyHQRZTch44...
+node client.js
+
+node server.js
+
+
