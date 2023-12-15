@@ -27,7 +27,9 @@ async function uploadBase64Screenshot(base64String, bucketName, fileName) {
 }
 
 const PORT = process.env.PORT || 3000
-const HOST = process.env.HOST || `http://localhost:${PORT}`
+const HOST = process.env.MYHOST || `http://localhost:${PORT}`
+
+console.log(HOST)
 
 const socket = io(HOST)
 
