@@ -19,7 +19,9 @@ https://github.com/ilyastupin/dasha.git
 
 ec2-18-191-24-107.us-east-2.compute.amazonaws.com
 
+
+TIME=$(date +%s) && \
 curl http://ec2-18-191-24-107.us-east-2.compute.amazonaws.com:3000/take-screenshot && \
-aws s3 cp s3://polaris-adventures-development-share/screenshot.png screenshot2.png && \
-open screenshot2.png
+aws s3 cp s3://polaris-adventures-development-share/screenshot.png screenshot$TIME.png && \
+open screenshot$TIME.png
 
