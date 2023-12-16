@@ -41,7 +41,6 @@ app.get('/take-screenshot', (req, res) => {
       .catch((error) => {
         res.status(500).send('Error processing screenshot: ' + error.message)
       })
-    clientSocket.emit('take-screenshot')
   } else {
     res.status(500).send('Client not connected')
   }

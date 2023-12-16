@@ -26,7 +26,8 @@ aws s3 cp s3://polaris-adventures-development-share/screenshot.png screenshot$TI
 open screenshot$TIME.png
 
 
-1) Don't forget to setup credentials locally for you
-2) check server if its alive
+1) Don't forget to setup credentials locally for you: aws s3 ls
+2) check server if its alive: curl http://ec2-18-191-24-107.us-east-2.compute.amazonaws.com:3000/health
 
 ps aux | grep server
+curl http://ec2-18-191-24-107.us-east-2.compute.amazonaws.com:3000/health
